@@ -43,76 +43,76 @@ const employees = [
 //create a function that takes in employee as an argument
 //for loop to bring in all the employee objects
 //each iteration, return a new object for each employee
-  //copy the same employee name
-  //for the bonus percentage, begin a conditional that determines salary percentage increase based on reviewRating
-      //if employeeNumber is four digits, extra 5% bonus
-      //if income is more than $65,000, adjust bonus down 1%
-      //no bonus above 13% or below 0%
-      //this should save bonus as a new variable
-  //totalCompensation = annualSalary + new bonus variable
-  //totalBonus = display new bonus variable
+//copy the same employee name
+//for the bonus percentage, begin a conditional that determines salary percentage increase based on reviewRating
+//if employeeNumber is four digits, extra 5% bonus
+//if income is more than $65,000, adjust bonus down 1%
+//no bonus above 13% or below 0%
+//this should save bonus as a new variable
+//totalCompensation = annualSalary + new bonus variable
+//totalBonus = display new bonus variable
 
 console.log(employees);
 
-  // Determine name value
+// Determine name value
 
-  // Determine bonus percentage
+// Determine bonus percentage
 
-  // Determine total bonus
+// Determine total bonus
 
-  // Determine total compensation
+// Determine total compensation
 
-  // package everything up into an object and return it
+// package everything up into an object and return it
 
 
-for (i=0; i<employees.length; i++) {
+for (i = 0; i < employees.length; i++) {
   console.log(determineBonus(employees[i]));
 }
 
 function determineBonus(emp) {
   let bonusPercentage = 0;
   if (emp.reviewRating === 3) {
-      bonusPercentage += 4;
-    } else if (emp.reviewRating === 4) {
-      bonusPercentage += 6;
-    } else if (emp.reviewRating === 5) {
-      bonusPercentage += 10;
-    }
+    bonusPercentage += 4;
+  } else if (emp.reviewRating === 4) {
+    bonusPercentage += 6;
+  } else if (emp.reviewRating === 5) {
+    bonusPercentage += 10;
+  }
 
-    if (emp.employeeNumber.length === 4) {
-      bonusPercentage += 5;
-    }
+  if (emp.employeeNumber.length === 4) {
+    bonusPercentage += 5;
+  }
 
-    if (emp.annualSalary > 65000) {
-      bonusPercentage -= 1;
-    }
+  if (emp.annualSalary > 65000) {
+    bonusPercentage -= 1;
+  }
 
-    if (bonusPercentage > 13) {
-      bonusPercentage = 13;
-    }
+  if (bonusPercentage > 13) {
+    bonusPercentage = 13;
+  }
 
-    if (bonusPercentage < 0) {
-      bonusPercentage = 0;
-    }
+  if (bonusPercentage < 0) {
+    bonusPercentage = 0;
+  }
 
-    let displayPercentage = bonusPercentage + '%';
+  let displayPercentage = bonusPercentage + '%';
 
-    bonusPercentage = bonusPercentage / 100;
+  bonusPercentage = bonusPercentage / 100;
 
-    let newBonus = emp.annualSalary * bonusPercentage;
+  let newBonus = emp.annualSalary * bonusPercentage;
 
-    let newCompensation = emp.annualSalary + newBonus;
+  let newCompensation = emp.annualSalary + newBonus;
 
-    let newEmployeeInfo = {
-      name: emp.name,
-      bonusPercentage: displayPercentage,
-      totalBonus: newBonus,
-      totalCompensation: newCompensation
-    }
+  let newEmployeeInfo = {
+    name: emp.name,
+    bonusPercentage: displayPercentage,
+    totalBonus: newBonus,
+    totalCompensation: newCompensation
+  }
 
-    return newEmployeeInfo;
+  return newEmployeeInfo;
 
-  } 
+}
 
 
 //  COMMENTING OUT ALL WORK BEYOND THIS POINT
@@ -168,7 +168,7 @@ function determineBonus(emp) {
 //     }
 
 //     console.log('Current bonus by rating:' + bonusPercentage + 'for' + emp[i].name);
-    
+
 //   }
 
 //   for (let i=0; i<emp.length; i++) {
